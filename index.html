@@ -55,13 +55,28 @@
             margin-bottom: 50px;
             color: #333;
         }
-        .about-content {
+        .about-intro {
             max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
+            margin: 0 auto 50px auto;
+            text-align: justify;           /* ← this makes it justified */
+            text-justify: inter-word;
             font-size: 1.15em;
             line-height: 1.9;
         }
+        .left-aligned {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        .left-aligned p {
+            margin-bottom: 28px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        /* (rest of your styles — projects, contact, etc. unchanged) */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -145,7 +160,7 @@
     <header id="home">
         <div class="container">
             <h1>Hari Saripalli</h1>
-            <p>Data Scientist | Machine Learning | Python & R Enthusiast</p>
+            <p>Data Scientist | Machine Learning | Gen AI</p>
         </div>
     </header>
 
@@ -153,28 +168,57 @@
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
+    <!-- About + Experience -->
     <section id="about">
         <div class="container">
             <h2>About Me</h2>
-            <div class="about-content">
+            
+            <!-- ←←← THIS PARAGRAPH IS NOW PERFECTLY JUSTIFIED ←←← -->
+            <div class="about-intro">
                 <p>Hi! I'm Hari, an analytics professional with an engineering background and operations leadership experience at Schlumberger and Liberty Energy.
                    I have led data-driven transformation across energy and healthcare sectors from optimizing oilfield operations to delivering enterprise ML and Gen AI solutions at Alberta Health Services with measurable business impact.</p>
+            </div>
+
+            <h2 style="margin-top: 60px; font-size: 2.2em;">Experience</h2>
+            <div class="left-aligned">
+                <p><strong>Senior Consultant & AI Lead</strong> — Alberta Health Services | 2023 – Present<br>
+                   Led analytics and Gen AI initiatives for pediatrics in collaboration with clinical and operational leaders.</p>
+                <p><strong>Staff Engineer</strong> — Liberty Energy | 2021 – 2023<br>
+                   Led engineering for $150–200M annual frac operations.</p>
+                <p><strong>Technical Sales & Field Engineer</strong> — Schlumberger | 2014 – 2021<br>
+                   Managed $100M+ hydraulic fracturing projects and led 15-person crews in remote Western Canada locations.</p>
+                <p><strong>Petroleum Engineer</strong> — Oil India Limited | 2009 – 2010<br>
+                   Reservoir modeling and quantitative analysis of oil and gas wells.</p>
             </div>
         </div>
     </section>
 
-    <!-- PROJECTS SECTION - NOW VISIBLE WITH YOUR FAVORITE CARD LAYOUT -->
+    <!-- Education (still left-aligned) -->
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="left-aligned">
+                <p><strong>Master of Management Analytics</strong><br>
+                   Smith School of Business, Queen’s University | 2021 – 2022</p>
+                <p><strong>M.Sc. Petroleum Engineering</strong><br>
+                   University of Calgary | 2011 – 2013</p>
+                <p><strong>B.Tech Petroleum Engineering</strong><br>
+                   Indian Institute of Technology (ISM) Dhanbad | 2005 – 2009</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects, Contact, Footer — unchanged -->
     <section id="projects">
         <div class="container">
             <h2>Projects</h2>
             <div class="projects-grid">
-
-                <!-- Real-time Voice AI Agent - Safe & Impressive -->
                 <div class="project-card">
                     <img src="https://via.placeholder.com/800x500/667eea/ffffff?text=Voice+AI+Agent" alt="Voice AI Agent">
                     <div class="project-body">
@@ -193,7 +237,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
